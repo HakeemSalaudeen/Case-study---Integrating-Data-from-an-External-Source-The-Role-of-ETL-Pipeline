@@ -7,6 +7,26 @@ import sqlalchemy as db
 
 url = 'https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/Financial%20Sample.xlsx'
 
+#to check for null values
+
+df.isna().values
+
+df.isna().values.any()        #output will be in true or false
+
+# to check for the data type
+
+df.dtypes
+
+# to see all the columns
+
+df.columns
+
+#to drop the segment column
+
+df.drop(columns = 'Segment', inplace = False)
+
+df.shape
+
 #importing it to python
 
 df = pd.read_excel(url)
