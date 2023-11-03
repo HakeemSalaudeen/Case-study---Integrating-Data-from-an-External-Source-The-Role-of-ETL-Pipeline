@@ -1,0 +1,2 @@
+# Case-study---Integrating-Data-from-an-External-Source-The-Role-of-ETL-Pipeline
+In the world of data analysis and machine learning, the significance of high-quality data cannot be overstated. In this situation, we embark on a journey to create an ETL pipeline using Python within Google Colab. Our goal is to extract financial data, transform it into a more manageable structure, and load it into a cloud-based SQL database.
