@@ -1,0 +1,22 @@
+# Import Pandas and SQL Alchemy as libraries that would be used in Creating ETL's
+
+import pandas as pd
+import sqlalchemy as db
+
+#Creating a variable for the link
+
+url = 'https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/Financial%20Sample.xlsx'
+
+#importing it to python
+
+df = pd.read_excel(url)
+df.head()
+
+#Sql instance
+
+engine = db.create_engine('postgresql://sfqyhmdx:20WZYfNg-ipL-DbYv8XyYFKXq1uWkHJn@surus.db.elephantsql.com/sfqyhmdx')
+
+df.to_sql('world_excel', engine,
+                  if_exists='replace',
+                  index=False,
+                  method='multi')
